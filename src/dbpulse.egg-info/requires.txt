@@ -1,0 +1,8 @@
+typer<1.0,>=0.12
+rich<15.0,>=13.7
+SQLAlchemy<3.0,>=2.0
+psycopg[binary]<4.0,>=3.2
+
+[dev]
+pytest<10.0,>=8.0
+ruff<1.0,>=0.9

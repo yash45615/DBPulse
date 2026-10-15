@@ -1,0 +1,23 @@
+
+# Python environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Test and lint artifacts
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local databases and secrets
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.*
+!.env.example
+
+# Generated local output
+reports/generated/

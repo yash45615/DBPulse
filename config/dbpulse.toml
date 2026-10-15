@@ -1,0 +1,22 @@
+
+[app]
+name = "DBPulse"
+environment = "local"
+
+[database]
+url = "sqlite:///./dbpulse.db"
+pool_size = 5
+
+[benchmark]
+default_workload = "read"
+iterations = 100
+warmup_iterations = 10
+concurrency = 1
+dataset_size = 1000
+
+[regression]
+latency_threshold_percent = 10.0
+minimum_samples = 20
+
+[reports]
+output_dir = "reports"

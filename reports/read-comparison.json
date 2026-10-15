@@ -1,0 +1,61 @@
+{
+  "report_version": 1,
+  "generated_at": "2026-10-15T13:00:38.669838+00:00",
+  "workload": "read",
+  "threshold_percent": 10.0,
+  "baseline": {
+    "run_id": 1,
+    "name": "read-baseline",
+    "statistics": {
+      "count": 100.0,
+      "mean_ms": 0.9534239999999999,
+      "min_ms": 0.6708,
+      "max_ms": 12.9591,
+      "p50_ms": 0.7307,
+      "p95_ms": 1.2617,
+      "p99_ms": 1.6737
+    }
+  },
+  "candidate": {
+    "run_id": 3,
+    "name": "read-candidate",
+    "statistics": {
+      "count": 100.0,
+      "mean_ms": 1.2259309999999999,
+      "min_ms": 0.6889,
+      "max_ms": 12.4206,
+      "p50_ms": 0.8966,
+      "p95_ms": 1.7639,
+      "p99_ms": 11.2151
+    }
+  },
+  "comparison": {
+    "has_regression": true,
+    "metrics": [
+      {
+        "metric": "mean",
+        "baseline_ms": 0.9534239999999999,
+        "candidate_ms": 1.2259309999999999,
+        "change_percent": 28.581932067999123,
+        "change_display": "+28.58%",
+        "regressed": true
+      },
+      {
+        "metric": "p95",
+        "baseline_ms": 1.2617,
+        "candidate_ms": 1.7639,
+        "change_percent": 39.8034398034398,
+        "change_display": "+39.80%",
+        "regressed": true
+      },
+      {
+        "metric": "p99",
+        "baseline_ms": 1.6737,
+        "candidate_ms": 11.2151,
+        "change_percent": 570.0782697018582,
+        "change_display": "+570.08%",
+        "regressed": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: dbpulse
+Version: 0.1.0
+Summary: Database performance benchmarking and workload regression lab
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: typer<1.0,>=0.12
+Requires-Dist: rich<15.0,>=13.7
+Requires-Dist: SQLAlchemy<3.0,>=2.0
+Requires-Dist: psycopg[binary]<4.0,>=3.2
+Provides-Extra: dev
+Requires-Dist: pytest<10.0,>=8.0; extra == "dev"
+Requires-Dist: ruff<1.0,>=0.9; extra == "dev"

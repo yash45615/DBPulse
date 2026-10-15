@@ -1,0 +1,45 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dbpulse"
+version = "0.1.0"
+description = "Database performance benchmarking and workload regression lab"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12,<1.0",
+    "rich>=13.7,<15.0",
+    "SQLAlchemy>=2.0,<3.0",
+    "psycopg[binary]>=3.2,<4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<10.0",
+    "ruff>=0.9,<1.0",
+]
+
+[project.scripts]
+dbpulse = "dbpulse.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
